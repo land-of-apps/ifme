@@ -4,5 +4,7 @@ version: ~> 1.0
 import: land-of-apps/land-of-apps:travis/ruby-imports.yml
   
 script:
+- bin/rake/setup_workspace
 - bin/rake db:setup db:test:prepare
+- rake slugs:slugify
 - APPMAP=true bundle exec rspec ./spec/*
