@@ -4,4 +4,5 @@ version: ~> 1.0
 import: land-of-apps/land-of-apps:travis/ruby-imports.yml
   
 script:
+- bundle exec rake db:migrate
 - APPMAP=true bundle exec rake spec
