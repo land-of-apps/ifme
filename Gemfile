@@ -53,6 +53,8 @@ gem 'selenium-webdriver', '~> 3.142.3'
 gem 'rubyzip', '~> 1.3.0'
 
 group :development, :test do
+
+  gem 'appmap'
   gem 'bundler-audit'
   gem 'dotenv-rails', '~> 2.7.2'
 
