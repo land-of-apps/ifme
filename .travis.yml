@@ -1,13 +1,15 @@
 # Turn on validation, so we can use import:
 version: ~> 1.0
 
-import: land-of-apps/land-of-apps:travis/ruby-imports.yml
+import:
+- land-of-apps/land-of-apps:travis/ruby-imports.yml
+- yarn
+- node
 
 services:
 - postgresql
 
 script:
-- ./bin/webpack-dev-server
 
 # - bundle exec rails webpacker:install
 # - RAILS_ENV=test bundle exec rails webpacker:compile
