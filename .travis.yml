@@ -14,12 +14,7 @@ services:
 script:
 - RAILS_ENV=test bundle exec rake db:create db:schema:load
 - RAILS_ENV=test bundle exec rails assets:precompile
-
-
-# - bundle exec rails webpacker:install
-# - RAILS_ENV=test bundle exec rails webpacker:compile
-
-#- bundle exec rails db:create
-#- bundle exec rails db:migrate
-
 - APPMAP=true bundle exec rspec ./spec/*
+
+after_script:
+- env DEBUG=true ruby ./upload-appmaps tmp/appmap/rspec
