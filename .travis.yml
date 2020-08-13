@@ -6,14 +6,8 @@ import: land-of-apps/land-of-apps:travis/ruby-imports.yml
 services:
 - postgresql
 
-install:
-- bundle install
-- nvm install node
-- node -v
-- npm i -g yarn
-- yarn
-  
 script:
+- rake webpacker:install
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - bundle exec rails webpacker:compile
