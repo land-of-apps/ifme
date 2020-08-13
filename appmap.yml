@@ -1,0 +1,8 @@
+name: ifme
+
+packages:
+- path: app
+- path: config
+- path: db
+- path: lib
+- path: spec
