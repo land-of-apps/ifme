@@ -7,6 +7,7 @@ services:
 - postgresql
 
 script:
+- bundle exec rails webpacker:install
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - APPMAP=true bundle exec rspec ./spec/*
