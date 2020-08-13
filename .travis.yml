@@ -6,6 +6,8 @@ import:
 - yarn
 - node
 
+addons: chrome: stable
+
 services:
 - postgresql
 
