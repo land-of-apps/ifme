@@ -3,6 +3,9 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
 
+# APPMAP
+require 'appmap/rspec'
+
 require 'simplecov'
 SimpleCov.start 'rails'
 
