@@ -3,6 +3,9 @@
 source 'https://rubygems.org'
 ruby '~> 2.6.0'
 
+# APPMAP
+gem 'appmap'
+
 gem 'puma'
 gem 'rack-rewrite'
 gem 'rails', '~> 6.0.3'
