@@ -1,8 +1,9 @@
 name: ifme
 
 packages:
-- path: app
-- path: config
-- path: db
-- path: lib
-- path: spec
+- path: app/controllers
+- path: app/helpers
+- path: app/mailers
+- path: app/models
+- path: app/services
+- path: app/uploaders
