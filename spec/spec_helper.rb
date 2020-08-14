@@ -6,6 +6,9 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'simplecov'
 SimpleCov.start 'rails'
 
+# APPMAP
+require 'appmap/rspec'
+
 require File.expand_path('../config/environment', __dir__)
 require 'rspec/rails'
 require 'rspec/collection_matchers'
