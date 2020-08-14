@@ -1,0 +1,17 @@
+# Turn on validation, so we can use import:
+version: ~> 1.0
+
+import:
+- yarn
+- node
+
+addons:
+  chrome: stable
+
+services:
+- postgresql
+
+script:
+- RAILS_ENV=test bundle exec rake db:create db:schema:load
+- RAILS_ENV=test bundle exec rails assets:precompile
+- RAILS_ENV=test bundle exec rspec ./spec/*
